@@ -1,32 +1,38 @@
 # Desafios IDwall
 
-Aqui estão os desafios para a primeira fase de testes de candidatos da IDwall.
-Escolha em qual linguagem irá implementar (a não ser que um de nossos colaboradores lhe instrua a utilizar uma linguagem específica).
+Pedro Augusto Santos Orona Silva [Linkedin](https://www.linkedin.com/in/pedro-augusto-santos-orona-silva-476950122/)
 
-Não há diferença de testes para diferentes níveis de profissionais, porém o teste será avaliado com diferentes critérios, dependendo do perfil da vaga.
+A seguir seguem as soluções desenvolvidas, todas em python, para os desafios propostos:
 
-1. [Manipulação de strings](https://github.com/idwall/desafios/tree/master/strings)
-2. [Crawlers](https://github.com/idwall/desafios/tree/master/crawlers)
+## [Manipulação de strings](https://github.com/idwall/desafios/tree/master/strings)
+Primeiramente, foi definido o texto a ser formatado dentro do arquivo [input](https://github.com/PedroOrona/desafios/blob/master/strings/input.txt), e então, por fim, executando o código através do comando:
 
-## Como entregar estes desafios
-Você deve forkar este projeto e fazer o *push* no seu próprio repositório e enviar o link para _jobs@idwall.co_ ou para o email do recrutador, junto com seu LinkedIn atualizado.
+`$ python string_idwall.py`
 
-A implementação deve ficar na pasta correspondente ao desafio. Fique à vontade para adicionar qualquer tipo de conteúdo que julgue útil ao projeto, alterar/acrescentar um README com instruções de como executá-lo, etc.
+é gerado o seguinte resultado:
+`
+Texto Formatado:
+
+In the beginning God created the heavens
+and   the   earth.  Now  the  earth  was
+formless  and  empty,  darkness was over
+the  surface of the deep, and the Spirit
+of  God  was  hovering  over the waters.
+
+And  God said, "Let there be light," and
+there  was light. God saw that the light
+was  good,  and  he  separated the light
+from  the darkness. God called the light
+"day,"   and   the  darkness  he  called
+"night."  And  there  was  evening,  and
+there  was  morning  -  the  first  day.
+`
+
+sendo que, podemos testar para qualquer texto, apenas modificando o arquivo citado anteriormente.
 
 **Obs.**:
-- Você não deve fazer um Pull Request para este projeto!
-- Utilizar as versões mais atuais da linguagem que escolher para desenvolver (JavaScript ES6+; Java 8; Python 3, etc).
+- Eu pensei em não justificar a última linha de cada parágrafo, para ficar mais no padrão, porém no exemplo isso não foi realizado, então preferi manter como instruído nos exemplos.
 
-### Extras
+## [Crawlers](https://github.com/idwall/desafios/tree/master/crawlers)
 
-- Descreva o processo de resolução dos desafios;
-- Descreva como utilizar a sua solução;
-- Tratamento de erros e exceções. Fica a seu critério quais casos deseja tratar e como serão tratados;
-- Testes unitários ou de integração;
-- Use o Docker.
 
-## Carreira IDwall
-
-Caso queira mais detalhes de como trabalhamos, quais são nossos valores e ideais, confira a página [Carreira IDwall](https://idwall.co/carreira) e mesmo que seu perfil não esteja listado nas vagas em aberto, lhe encorajamos a mandar seu CV! Valorizamos bons profissionais sempre e gostamos de manter contato com gente boa.
-
-Boas implementações! 🎉
