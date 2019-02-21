@@ -71,7 +71,8 @@ def request(url):
 
 Os headers permitem simular um acesso via browser; sem eles o reddit bloqueava todas as vezes o meu acesso, e pedia para eu esperar um tempo antes de tentar executá-lo novamente.
 
-Então, executando o código através do seguinte comando:
+Então, executando o [código](https://github.com/PedroOrona/desafios/blob/master/crawlers/crawlers_idwall.py) através do seguinte comando:
+
 `$ python crawlers_idwall.py`
 
 o programa pede para o usuário entrar com os subreddits separados por ponto-e-vírgula, como por exemplo:
