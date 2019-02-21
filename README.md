@@ -121,6 +121,7 @@ este irá enviar todas as informações definidas na parte 1 do desafio, porém 
 
 ![alt text](https://github.com/PedroOrona/desafios/blob/master/crawlers/telegram_bot.png)
 
-Para mais informações, pode-se explorar os códigos desenvolvidos em python. Foram comentadas As partes que eu considerei mais relevantes e que talvez necessitaram de uma maior explicação.  
+- Para mais informações, sugire que se explore os códigos desenvolvidos em python. 
+- Foram comentadas as partes que eu considerei mais relevantes e que talvez necessitaram de uma maior explicação.  
 
-Um abraço!
+Um abraço! :space_invader:
