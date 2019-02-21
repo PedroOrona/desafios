@@ -7,7 +7,7 @@ A seguir seguem as soluções desenvolvidas, todas em python, para os desafios p
 ## Manipulação de strings
 Primeiramente, foi definido o texto a ser formatado dentro do arquivo [input](https://github.com/PedroOrona/desafios/blob/master/strings/input.txt), após esta primeira etapa, foi realizada contrução da solução utilizando. A primeira parte do trabalho se resumiu à utilização da biblioteca *textwrap*, utilizada para separação do texto utilizando o comprimento indicado. Para a segunda parte eu acabei construindo o código sem a utilização da biblioteca, tendo assim maior controle da formatação. 
 
-Executando o código através do comando:
+Executando o [código](https://github.com/PedroOrona/desafios/blob/master/strings/string_idwall.py) através do comando:
 
 `$ python string_idwall.py`
 
