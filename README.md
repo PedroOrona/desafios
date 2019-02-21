@@ -81,6 +81,41 @@ o programa pede para o usuário entrar com os subreddits separados por ponto-e-v
 
 e então retorna todas as informações das threads relevantes de cada subreddit.
 
+### Parte 2 - Bot Telegram
 
+Para criar o Bot que se conecte ao Telegram, foi preciso conversar com o @BotFather, dentro do telegram. Ele é o responsável pela criação de novos bots. Para isso, foi enviad o seguinte comando: `\newbot`.
 
+Após definir um nome para o bot, *NadaPraFazerBot*, e um nome de usuário, *@idwall_bot*, podemos realizar a conexão com ele, através do token retornado pelo *BotFather*.
 
+Para nos conectarmos ao bot que criamos usando o BotFather utilizamos o módulo python-telegram-bot, o qual realiza a conexão do programa com a API de bots do Telegram.
+
+Para instalar este módulo, usamos o pip:
+
+`pip install python-telegram-bot`
+
+Agora podemos definir nossa main, contendo a conexão e os handlers a serem definidos por nós:
+
+```ruby
+updater = Updater(token='768765479:AAFAOG6qA5gZzAIduOCI4OOak5Q_sfOA7dc')
+dispatcher = updater.dispatcher
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                 level=logging.INFO)
+
+start_handler = CommandHandler('start', start)
+dispatcher.add_handler(start_handler)
+dispatcher.add_handler(CommandHandler('NadaPraFazer', NadaPraFazer, pass_args=True))
+updater.start_polling()
+updater.idle()
+```
+
+Foi setado também o módulo *login* para monitorar caso algo dê errado. Rodando a main, mantemos o programa em execução, podendo ser parado a qualquer momento, terminando assim a conexão com o bot *NadaPraFazerBot*.
+
+Para realizar a busca dos dados do Reddit, devemos apenas adicionar o código desenvolvido na parte 1, definindo esta seção do programa, como um Handler, chamado aqui de *NadaPraFazer*, que recebe como argumento a lista de subreddits que o usuário tem interesse em explorar.
+
+Logo, enviando para o bot a seguinte mensagem, por exemplo:
+
+`/NadaPraFazer askreddit;worldnews;cats`
+
+este irá enviar todas as informações definidas na parte 1 do desafio, porém agora via telegram, como apresnetado na figura a seguir:
+
+![alt text](https://github.com/PedroOrona/desafios/blob/master/crawlers/telegram_bot.png)
