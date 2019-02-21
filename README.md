@@ -45,7 +45,8 @@ Inspecionando as páginas do Reddit, na versão *old*, foram encontradas as tags
 
 Apenas para melhor compreensão do código, explicarei alguns trechos.
 
-Nesta parte eu apenas removo da coleção, as threads que possuem menos que 5000 upvotes, para, por fim, poder apresentar as mais populares para o usuário.
+Nesta parte eu apenas removo da coleção, as threads que possuem menos que 5000 upvotes, para, por fim, poder apresentar as mais populares para o usuário. Para o cuso do subreddit não possuir nenhuma thread que possua o mínimo de upvotes definido, o programa imprime a mensagem de que este não possui nenhuma thread relevante.
+
 ```ruby
 i, k = 0, 0
 j = len(upvotes)        
@@ -93,7 +94,7 @@ Para instalar este módulo, usamos o pip:
 
 `pip install python-telegram-bot`
 
-Agora podemos definir nossa main, contendo a conexão e os handlers a serem definidos por nós:
+Agora podemos definir nossa [main](https://github.com/PedroOrona/desafios/blob/master/crawlers/crawlers_idwall_bot.py), contendo a conexão e os handlers a serem definidos por nós:
 
 ```ruby
 updater = Updater(token='768765479:AAFAOG6qA5gZzAIduOCI4OOak5Q_sfOA7dc')
@@ -119,3 +120,7 @@ Logo, enviando para o bot a seguinte mensagem, por exemplo:
 este irá enviar todas as informações definidas na parte 1 do desafio, porém agora via telegram, como apresnetado na figura a seguir:
 
 ![alt text](https://github.com/PedroOrona/desafios/blob/master/crawlers/telegram_bot.png)
+
+Para mais informações, pode-se explorar os códigos desenvolvidos em python. Foram comentadas As partes que eu considerei mais relevantes e que talvez necessitaram de uma maior explicação.  
+
+Um abraço!
