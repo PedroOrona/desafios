@@ -12,8 +12,8 @@ Executando o código através do comando:
 `$ python string_idwall.py`
 
 é gerado o seguinte resultado:
-
-`Texto Formatado:
+```
+Texto Formatado:
 
 In the beginning God created the heavens
 and   the   earth.  Now  the  earth  was
@@ -27,7 +27,8 @@ was  good,  and  he  separated the light
 from  the darkness. God called the light
 "day,"   and   the  darkness  he  called
 "night."  And  there  was  evening,  and
-there  was  morning  -  the  first  day.`
+there  was  morning  -  the  first  day.
+```
 
 sendo que, podemos testar para qualquer texto, apenas modificando o arquivo citado anteriormente.
 
