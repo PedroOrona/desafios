@@ -4,7 +4,7 @@ Pedro Augusto Santos Orona Silva [Linkedin](https://www.linkedin.com/in/pedro-au
 
 A seguir seguem as soluções desenvolvidas, todas em python, para os desafios propostos:
 
-## [Manipulação de strings](https://github.com/idwall/desafios/tree/master/strings)
+## Manipulação de strings
 Primeiramente, foi definido o texto a ser formatado dentro do arquivo [input](https://github.com/PedroOrona/desafios/blob/master/strings/input.txt), após esta primeira etapa, foi realizada contrução da solução utilizando. A primeira parte do trabalho se resumiu à utilização da biblioteca *textwrap*, utilizada para separação do texto utilizando o comprimento indicado. Para a segunda parte eu acabei construindo o código sem a utilização da biblioteca, tendo assim maior controle da formatação. 
 
 Executando o código através do comando:
@@ -35,7 +35,7 @@ sendo que, podemos testar para qualquer texto, apenas modificando o arquivo cita
 **Obs.**:
 - Eu pensei em não justificar a última linha de cada parágrafo, para ficar mais no padrão, porém no exemplo isso não foi realizado, então preferi manter como instruído nos exemplos.
 
-## [Crawlers](https://github.com/idwall/desafios/tree/master/crawlers)
+## Crawlers
 
 ### Parte 1 - Versão CLI
 
@@ -44,8 +44,8 @@ Para a versão console foi utilizada a biblioteca *BeautifulSoup*, seguindo a di
 Inspecionando as páginas do Reddit, na versão *old*, foram encontradas as tags em html que oferecem os conteúdos buscados para cada thread dentro dos subreddits: número de upvotes, título do subreddit, título da thread, link para os comentários da thread, link da thread.
 
 Apenas explicando alguns trechos do código:
-```
- i, k = 0, 0
+```ruby
+i, k = 0, 0
 j = len(upvotes)        
 while k < j:
     if int(upvotes[i]) < 5000:
@@ -62,7 +62,7 @@ if len(upvotes) == 0:
 ```
 Nesta parte eu apenas removo da coleção, as threads que possuem menos que 5000 upvotes, para, por fim, poder apresentar as mais populares para o usuário.
 
-```
+```ruby
 def request(url):
     headers = {'User-Agent': 'Mozilla/5.0'}
     source = requests.get('https://old.reddit.com/r/' + url + '/', headers=headers)
