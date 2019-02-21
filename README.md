@@ -43,7 +43,9 @@ Para a versão console foi utilizada a biblioteca *BeautifulSoup*, seguindo a di
 
 Inspecionando as páginas do Reddit, na versão *old*, foram encontradas as tags em html que oferecem os conteúdos buscados para cada thread dentro dos subreddits: número de upvotes, título do subreddit, título da thread, link para os comentários da thread, link da thread.
 
-Apenas explicando alguns trechos do código:
+Apenas para melhor compreensão do código, explicarei alguns trechos.
+
+Nesta parte eu apenas removo da coleção, as threads que possuem menos que 5000 upvotes, para, por fim, poder apresentar as mais populares para o usuário.
 ```ruby
 i, k = 0, 0
 j = len(upvotes)        
@@ -60,7 +62,8 @@ while k < j:
 if len(upvotes) == 0:
     print("Nenhuma thread relevante para o subreddit: {0}".format(u))
 ```
-Nesta parte eu apenas removo da coleção, as threads que possuem menos que 5000 upvotes, para, por fim, poder apresentar as mais populares para o usuário.
+
+Os headers permitem simular um acesso via browser, por isso a definição do agente abaixo; sem eles o reddit bloqueava todas as vezes o meu acesso, e pedia para eu esperar um tempo antes de tentar executá-lo novamente.
 
 ```ruby
 def request(url):
@@ -68,8 +71,6 @@ def request(url):
     source = requests.get('https://old.reddit.com/r/' + url + '/', headers=headers)
     return source
 ```
-
-Os headers permitem simular um acesso via browser; sem eles o reddit bloqueava todas as vezes o meu acesso, e pedia para eu esperar um tempo antes de tentar executá-lo novamente.
 
 Então, executando o [código](https://github.com/PedroOrona/desafios/blob/master/crawlers/crawlers_idwall.py) através do seguinte comando:
 
