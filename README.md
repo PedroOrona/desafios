@@ -37,4 +37,48 @@ sendo que, podemos testar para qualquer texto, apenas modificando o arquivo cita
 
 ## [Crawlers](https://github.com/idwall/desafios/tree/master/crawlers)
 
+### Parte 1 - Versão CLI
+
+Para a versão console foi utilizada a biblioteca *BeautifulSoup*, seguindo a dica oferecida.
+
+Inspecionando as páginas do Reddit, na versão *old*, foram encontradas as tags em html que oferecem os conteúdos buscados para cada thread dentro dos subreddits: número de upvotes, título do subreddit, título da thread, link para os comentários da thread, link da thread.
+
+Apenas explicando alguns trechos do código:
+```
+ i, k = 0, 0
+j = len(upvotes)        
+while k < j:
+    if int(upvotes[i]) < 5000:
+        upvotes.pop(i)
+        title.pop(i)
+        link.pop(i)
+        comments_link.pop(i)
+    else:
+       i = i + 1 
+    k = k + 1    
+
+if len(upvotes) == 0:
+    print("Nenhuma thread relevante para o subreddit: {0}".format(u))
+```
+Nesta parte eu apenas removo da coleção, as threads que possuem menos que 5000 upvotes, para, por fim, poder apresentar as mais populares para o usuário.
+
+```
+def request(url):
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    source = requests.get('https://old.reddit.com/r/' + url + '/', headers=headers)
+    return source
+```
+
+Os headers permitem simular um acesso via browser; sem eles o reddit bloqueava todas as vezes o meu acesso, e pedia para eu esperar um tempo antes de tentar executá-lo novamente.
+
+Então, executando o código através do seguinte comando:
+`$ python crawlers_idwall.py`
+
+o programa pede para o usuário entrar com os subreddits separados por ponto-e-vírgula, como por exemplo:
+`askreddit;worldnews;cats`
+
+e então retorna todas as informações das threads relevantes de cada subreddit.
+
+
+
 
